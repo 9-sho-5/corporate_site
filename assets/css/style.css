@@ -10,9 +10,9 @@ footer {
 
 .anime {
   position: relative;
-  transform: translateY(10px);
+  transform: translateY(80px);
   opacity: 0;
-  transition: 1s all ease-in-out;
+  transition: 0.5s all 0.2s ease-in-out;
 }
 
 .animated {
