@@ -29,6 +29,7 @@
     }
     h1{
         position: absolute;
+        z-index: 99;
         left: 12.5%;
         bottom: 20%;
         font-size: 80px;
@@ -55,7 +56,7 @@
 }
 
 .width-wrap{
-    width: min(100% - 30px, 1080px);
+    width: min(100% - 60px, 1080px);
     margin: 0 auto;
 }
 
@@ -83,6 +84,7 @@ section{
 }
 .service-card-wrap{
     display: flex;
+    gap: 30px;
     justify-content: space-between;
 }
 .service-card{
@@ -126,8 +128,12 @@ section{
     display: flex;
     justify-content: center;
     gap: 60px;
-    i::before{
-        font-size: 50px;
+    i{
+        width: 60px;
+        text-align: center;
+        &::before{
+            font-size: 50px;
+        }
     }
     img{
         width: 50px;
@@ -337,6 +343,7 @@ section{
         position: relative;
         img{
             position: absolute;
+            z-index: -1;
             bottom: 0;
             right: 0;
             border-radius: 20px;
@@ -352,9 +359,6 @@ section{
             display: inline;
             color: #1BC590;
             font-size: 42px;
-        }
-        &:last-child{
-            text-indent: -1rem;
         }
     }
     span{
@@ -373,6 +377,7 @@ section{
         line-height: 50px;
         color: white;
         background-color: #67DDA1;
+        box-shadow: 10px 15px 20px rgba(#555555, 0.25);
     }
     ul{
         display: flex;
@@ -386,6 +391,7 @@ section{
         a{
             padding: 0;
             background-color: initial;
+            box-shadow: initial;
             i{
                 position: absolute;
                 top: 50%;

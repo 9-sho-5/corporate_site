@@ -41,6 +41,7 @@ footer {
 }
 #fv h1 {
   position: absolute;
+  z-index: 99;
   left: 12.5%;
   bottom: 20%;
   font-size: 80px;
@@ -66,7 +67,7 @@ footer {
 }
 
 .width-wrap {
-  width: min(100% - 30px, 1080px);
+  width: min(100% - 60px, 1080px);
   margin: 0 auto;
 }
 
@@ -95,6 +96,7 @@ section p span {
 
 .service-card-wrap {
   display: flex;
+  gap: 30px;
   justify-content: space-between;
 }
 
@@ -140,6 +142,10 @@ section p span {
   display: flex;
   justify-content: center;
   gap: 60px;
+}
+.icon-wrap i {
+  width: 60px;
+  text-align: center;
 }
 .icon-wrap i::before {
   font-size: 50px;
@@ -358,6 +364,7 @@ section p span {
 }
 #contact .width-wrap img {
   position: absolute;
+  z-index: -1;
   bottom: 0;
   right: 0;
   border-radius: 20px;
@@ -373,9 +380,6 @@ section p span {
   display: inline;
   color: #1BC590;
   font-size: 42px;
-}
-#contact p:last-child {
-  text-indent: -1rem;
 }
 #contact span {
   display: block;
@@ -393,6 +397,7 @@ section p span {
   line-height: 50px;
   color: white;
   background-color: #67DDA1;
+  box-shadow: 10px 15px 20px rgba(85, 85, 85, 0.25);
 }
 #contact ul {
   display: flex;
@@ -407,6 +412,7 @@ section p span {
 #contact ul a {
   padding: 0;
   background-color: initial;
+  box-shadow: initial;
 }
 #contact ul a i {
   position: absolute;
