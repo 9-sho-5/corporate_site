@@ -87,8 +87,11 @@
 .ham_menu-wrap .window-fixed .links_wrap a {
   text-align: center;
   color: white !important;
+  font-family: "quicksand";
   font-size: 24px;
+  font-weight: 600;
   line-height: 72px;
+  letter-spacing: 1.7px;
   transition: all 0.3s ease-in-out;
 }
 .ham_menu-wrap .window-fixed .links_wrap a:hover {
@@ -245,7 +248,7 @@ footer {
   #fv h1 {
     bottom: 10%;
     font-size: 48px;
-    filter: drop-shadow(3px 3px 1px white);
+    filter: drop-shadow(4px 4px 1px white);
   }
   #fv span {
     font-size: 32px;
@@ -270,6 +273,14 @@ footer {
   #fv .bg-icons img:nth-child(2n) {
     width: 40px;
     height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #fv h1 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
   }
 }
 section {
@@ -695,7 +706,7 @@ section p span {
     margin-top: 15px;
   }
   .slider-item-text-wrap h5 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .slider-item-text-wrap span, .slider-item-text-wrap .cat {
     font-size: 12px;
@@ -704,7 +715,7 @@ section p span {
   .slider-item-text-wrap p {
     margin-top: 15px;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 25px;
   }
   .slider img {
     height: 175px;
@@ -726,6 +737,14 @@ section p span {
   }
   .slick-next {
     right: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .slick-dots {
+    bottom: -40px;
+  }
+  .slick-prev, .slick-next {
+    display: none !important;
   }
 }
 #contact .width-wrap {

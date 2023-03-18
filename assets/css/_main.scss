@@ -130,7 +130,7 @@
         h1{
             bottom: 10%;
             font-size: 48px;
-            filter: drop-shadow(3px 3px 1px white);
+            filter: drop-shadow(4px 4px 1px white);
         }
         span{
             font-size: 32px;
@@ -157,6 +157,16 @@
                     height: 40px;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    #fv{
+        h1{
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
         }
     }
 }
@@ -579,7 +589,7 @@ section{
             margin-top: 15px;
         }
         h5{
-            font-size: 24px;
+            font-size: 20px;
         }
         span, .cat{
             font-size: 12px;
@@ -588,7 +598,7 @@ section{
         p{
             margin-top: 15px;
             font-size: 16px;
-            line-height: 32px;
+            line-height: 25px;
         }
     }
     .slider{
@@ -613,6 +623,14 @@ section{
     }
     .slick-next{
         right: 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .slick-dots{
+        bottom: -40px;
+    }
+    .slick-prev, .slick-next{
+        display: none !important;
     }
 }
 

@@ -99,8 +99,11 @@
             a{
                 text-align: center;
                 color: white !important;
+                font-family: "quicksand";
                 font-size: 24px;
+                font-weight: 600;
                 line-height: 72px;
+                letter-spacing: 1.7px;
                 transition: all 0.3s ease-in-out;
                 &:hover{
                     text-decoration: underline;

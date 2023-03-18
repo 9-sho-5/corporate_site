@@ -34,10 +34,11 @@ $('.slider').slick({
           }
         },
         {
-          breakpoint: 450, // 768px以下のサイズに適用
+          breakpoint: 425, // 768px以下のサイズに適用
           settings: {
             centerMode: false,        //追記
             centerPadding: "0%",    //追記
+            dots: true,
           }
         },
       ],
