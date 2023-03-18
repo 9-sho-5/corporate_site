@@ -97,3 +97,7 @@ $(document).on('click', '.links_wrap a', function () {
       $('body').css('overflow-y', 'auto');     // 本文の縦スクロールを有効
   };
 });
+
+$(function($) {
+  $(".modal-button").modaal();
+});

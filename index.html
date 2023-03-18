@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/modaal.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -90,29 +91,78 @@
                 <h2 class="anime">Service</h2>
                 <h3 class="anime">ー サービス内容</h3>
                 <div class="service-card-wrap mt-65 mt-lg-40">
-                    <div class="anime service-card px-30 pt-60 pb-15">
+                    <a href="#service-card-1" class="anime modal-button service-card px-30 pt-60 pb-15">
                         <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Figma-Dark.svg" alt="">
                         <div class="icon-wrap">
                             <i class="fa-solid fa-pen-ruler"></i>
                             <i class="fa-solid fa-user-large"></i>
                         </div>
                         <span>企画・デザインの相談</span>
+                    </a>
+                    <div id="service-card-1" style="display: none;">
+                        <div class="service-card-modal-item">
+                            <img src="assets/img/icon_notion.png" alt="" style="padding: 5px; background-color: white;border-radius: 20px;">
+                            <div class="text-wrap">
+                                <h4 class="my-0">企画</h4>
+                                <p>「Notion」「Google Spread Sheet」等のアプリケーションを使用し、リアルタイムで双方向に確認可能な体制で企画組みを行います。</p>
+                            </div>
+                        </div>
+                        <div class="service-card-modal-item">
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Figma-Dark.svg" alt="">
+                            <div class="text-wrap">
+                                <h4 class="my-0">デザイン</h4>
+                                <p>デザインツールの「Figma」を使用して、デザインのテーマカラーからワイヤーフレームの作成、デザインカンプまで行います。</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="anime service-card px-30 pt-60 pb-15">
+                    <a href="#service-card-2" class="anime modal-button service-card px-30 pt-60 pb-15">
                         <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Wordpress.svg" alt="">
                         <div class="icon-wrap">
                             <i class="fa-solid fa-computer-mouse"></i>
                             <i class="fa-solid fa-laptop-code"></i>
                         </div>
                         <span>WordPressでのWeb開発</span>
+                    </a>
+                    <div id="service-card-2" style="display: none;">
+                        <div class="service-card-modal-item">
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Wordpress.svg" alt="">
+                            <div class="text-wrap">
+                                <h4 class="my-0">WordPress</h4>
+                                <p>「Notion」「Google Spread Sheet」等のアプリケーションを使用し、リアルタイムで双方向に確認可能な体制で企画組みを行います。</p>
+                            </div>
+                        </div>
+                        <div class="service-card-modal-item">
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/VSCode-Dark.svg" alt="">
+                            <div class="text-wrap">
+                                <h4 class="my-0">コーディング</h4>
+                                <p>コードエディターである「VSCode」を使用して、デザインをもとにHTML、CSSコーディングやJavaScriptによるアニメーション、PHPによるCMS実装を行います。</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="anime service-card px-30 pt-60 pb-15">
+                    <a href="#service-card-3" class="anime modal-button service-card px-30 pt-60 pb-15">
                         <img src="./assets/img/icon_server.svg" alt="">
                         <div class="icon-wrap">
                             <img src="./assets/img/icon_smile.svg" alt="">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <span>Webサイト公開までサポート</span>
+                    </a>
+                    <div id="service-card-3" style="display: none;">
+                        <div class="service-card-modal-item">
+                            <img src="./assets/img/icon_server.svg" alt="">
+                            <div class="text-wrap">
+                                <h4 class="my-0">サーバーへアップロード</h4>
+                                <p>サーバーをご契約でない方・初めての方は、特にご指定がない場合は<a href="https://rs.sakura.ad.jp/?gclid=Cj0KCQjwwtWgBhDhARIsAEMcxeBsMkIeyp2L5-cQLxrPlIX5Yb-UPGmiChqKc60GqzO0V0EQEpRnQu8aAia-EALw_wcB" target="_blank" rel="noopener noreferrer" style="display: inline; height: auto;color: #222222;">「さくらレンタルサーバー」</a>をご案内しております。</p>
+                            </div>
+                        </div>
+                        <div class="service-card-modal-item">
+                            <img src="assets/img/handshake-regular.svg" alt="" style="padding: 5px; background-color: white;border-radius: 20px; object-fit: contain;">
+                            <div class="text-wrap">
+                                <h4 class="my-0">その後のサポート</h4>
+                                <p>Webサイトをサーバーへアップロード後何かしらのトラブルがございましたたら、アップロードした日から90日以内であればご対応させていただきます。
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,7 +188,7 @@
                             <h4><span>02</span>Design</h4>
                             <h5>ー デザイン</h5>
                             <p>
-                                お客様からヒヤリングした情報に沿ってデザインさせていただきます。リーチさせるユーザーはどのような人なのかまで考えながら一緒にご相談させていただきます。<br>
+                                お客様からヒヤリングした情報に沿ってデザインさせていただきます。リーチさせるユーザーはどのような人なのかまで考えながらご一緒に理想の形に近づけて参ります。<br>
                                 Webサイトを見るユーザーが使うことを重視し、目的とする操作を迷わず行えるデザインを心がけて制作させていただきます。
                             </p>
                         </div>
@@ -181,7 +231,7 @@
                             <dt>スキル：</dt>
                             <dd>
                                 HTML・Sass・JavaScript・PHP・SQL・Swift・Ruby<br>
-                                Webデザイン、CMS構築<br>
+                                Webデザイン、CMS構築、WordPress<br>
                                 Web制作ディレクション<br>
                                 データベース設計、サーバー管理
                             </dd>
@@ -189,8 +239,9 @@
                         <dl class="anime bio-item">
                             <dt>経歴：</dt>
                             <dd>
-                                2020年よりプログラミングスクールにてメンター業を行う<br>
-                                2021年より現在までWord PressによるWeb制作業務に従事
+                                2020年よりプログラミングスクールにてメンター業を行う(iPhoneアプリ、Webデザイン、Webアプリ)<br>
+                                2021年より現在までWord PressによるWeb制作業務に従事<br>
+                                Webサイト制作はこれまでに20件以上を行う<br>
                             </dd>
                         </dl>
                     </div>
@@ -346,6 +397,7 @@
     <footer class="anime">
         &copy;Hosho Kusunose 2022-<script>document.write(new Date().getFullYear())</script>
     </footer>
+    <script src="assets/js/modaal.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
