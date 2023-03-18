@@ -17,6 +17,30 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
+    <header id="top">
+        <div class="ham_menu-wrap">
+            <div class="ham_menu" data-state="inactive">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="window-fixed">
+                <div class="window">
+                    <div class="links_wrap">
+                        <ul>
+                            <li><a href="#top">Top</a></li>
+                            <li><a href="#concept">Concept</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#workflow">Workflow</a></li>
+                            <li><a href="#about_me">About Me</a></li>
+                            <li><a href="#works">Works</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
         <section id="fv"  class="anime_fv">
             <h1 class="anime">Start <span>with</span><br>a New Step</h1>
@@ -45,22 +69,22 @@
                 <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Java-Dark.svg" alt="">
             </div>
         </section>
-        <section class="mt-90 mt-md-80 mb-120 mb-md-60">
+        <section class="pt-90 pt-md-80 pb-120 pb-md-60" id="concept">
             <div class="width-wrap">
                 <h2 class="anime m-auto">Concept</h2>
                 <h3 class="anime m-auto">コンセプト</h3>
                 <p class="anime mt-60 mt-lg-30">
-                    はじめまして、「ほしょ」と申します。<br>
-                    WordPressを使ったWeb開発を行うエンジニア兼デザイナーです。<br>
+                    <span>はじめまして、「ほしょ」と申します。</span>
+                    <span>WordPressを使ったWeb開発を行うエンジニア兼デザイナーです。</span>
                     <span>人と技術の出会いから、「なんかかっこい。」を生み出す</span>
-                    Webデザイン・Web開発をコンセプトとしております。<br>
+                    <span>Webデザイン・Web開発をコンセプトとしております。</span>
                     <span>ビジネスにおけるビジョンに真摯に向きあい、</span>
                     <span>技術とアイデアで新しい誰かにいいと思っていただけるよう、</span>
-                    マネジメントから設計、デザイン、コーディング、Webサイトの公開までをお請けいたします。
+                    <span>マネジメントから設計、デザイン、コーディング、Webサイトの公開までをお請けいたします。</span>
                 </p>
             </div>
         </section>
-        <section class="bg-green">
+        <section class="bg-green" id="service">
             <div class="width-wrap pt-75 pb-120">
                 <h2 class="anime">Service</h2>
                 <h3 class="anime">ー サービス内容</h3>
@@ -92,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="workflow">
             <div class="width-wrap pt-75 pb-120">
                 <h2 class="anime">Workflow</h2>
                 <h3 class="anime">ー 完成までの流れ</h3>
@@ -142,7 +166,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-green">
+        <section class="bg-green" id="about_me">
             <div class="width-wrap pt-75 pb-120">
                 <h2 class="anime">About Me</h2>
                 <h3 class="anime">ー これまでの経歴</h3>
@@ -183,7 +207,7 @@
                 </div>
             </div>
         </section>
-        <section class="pt-75 pb-120 pb-md-60">
+        <section class="pt-75 pb-120 pb-md-60" id="works">
             <div class="width-wrap pb-60 pb-md-30">
                 <h2 class="anime">Works</h2>
                 <h3 class="anime">ー 作品一覧</h3>
@@ -191,7 +215,7 @@
             <div class="slider anime">
                 <div class="slider-item">
                     <img src="assets/img/slider-2.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>コンビニエンスストア支援企業HP</h5>
                             <span>2021.Sep</span>
@@ -206,7 +230,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="assets/img/slider-3.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>ホテル人材会社HP</h5>
                             <span>2022.Jan</span>
@@ -221,7 +245,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="assets/img/slider-5.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>出版社メインHP</h5>
                             <span>2022.Aug</span>
@@ -236,7 +260,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="assets/img/slider-4.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>美容室HP</h5>
                             <span>2022.Oct</span>
@@ -251,7 +275,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="assets/img/slider-1.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>コンサルティング会社HP</h5>
                             <span>2023.Feb</span>
@@ -266,7 +290,7 @@
                 </div>
                 <div class="slider-item">
                     <img src="assets/img/slider-6.jpg" alt="">
-                    <div class="slider-item-text-wrap px-30">
+                    <div class="slider-item-text-wrap px-30 px-md-0">
                         <div class="slider-item-header">
                             <h5>コンサルティング会社採用HP</h5>
                             <span>2023.Feb</span>

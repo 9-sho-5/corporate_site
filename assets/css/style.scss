@@ -2,4 +2,8 @@
 @use "footer";
 @use "main";
 @use "font";
-@use "spacer"
+@use "spacer";
+
+body{
+    overflow-y: auto;
+}
