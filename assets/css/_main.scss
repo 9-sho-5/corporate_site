@@ -1,8 +1,8 @@
 .anime{
     position: relative;
-    transform: translateY(80px);
+    transform: translateY(65px);
     opacity: 0;
-    transition: 0.5s all 0.2s ease-in-out;
+    transition: 0.3s all 0.2s ease-in-out;
 }
 .animated{
     transform: translateY(0px);
@@ -18,6 +18,29 @@
     margin: 0 auto;
 }
 
+// FV Animation
+.anime_fv{
+    &::before{
+        transition: width 0.4s ease-in-out;
+        box-shadow: 20px 12px 10px rgba(#555555, 0.25);
+    }
+    img{
+        transition: 0.6s ease-in-out;
+        transition-delay: 0.5s;
+    }
+    &.animated{
+        &::before{
+            width: 100% !important;
+        }
+        img{
+            right: 12.5% !important;
+            bottom: 0px !important;
+            opacity: 1 !important;
+            filter: drop-shadow(10px 15px 0px rgba(#67DDA1,1)) !important;
+        }
+    }
+}
+
 #fv{
     width: 100%;
     height: 100vh;
@@ -29,11 +52,10 @@
         left: 0;
         bottom: 0;
         display: block;
-        width: 100%;
+        width: 0%;
         height: 55%;
-        transform-origin: bottom left;
         transform: skew(-6deg) rotate(-6deg);
-        box-shadow: 20px 12px 10px rgba(#555555, 0.25);
+        transform-origin: bottom left;
         background-color: #EFF5F4;
     }
     h1{
@@ -53,10 +75,47 @@
     }
     img{
         position: absolute;
-        right: 12.5%;
-        bottom: 0;
+        right: 11.5%;
+        bottom: -5px;
         display: block;
-        height: 88.5%;
+        height: 83.5%;
+        opacity: 0;
+        filter: drop-shadow(10px 15px 0px rgba(#67DDA1,0));
+    }
+    .bg-icons{
+        position: absolute;
+        z-index: -1;
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 150px 150px 150px;
+        width: 100%;
+        height: 100%;
+        padding: 60px;
+        img{
+            position: relative;
+            top: 0;
+            left: 0;
+            right: inherit;
+            bottom: 0;
+            opacity: 0.5 !important;
+            display: block;
+            margin: 0 auto;
+            aspect-ratio: 1/1;
+            text-align: center;
+            filter: drop-shadow(10px 10px 0px rgba(#67DDA1,1));
+            transition-delay: 0s;
+        }
+        img{
+            width: 50%;
+            height: 50%;
+            &:nth-child(2n){
+                width: 40%;
+                height: 40%;
+            }
+        }
     }
 }
 @media screen and (max-width: 1024px) {
@@ -71,14 +130,33 @@
         h1{
             bottom: 10%;
             font-size: 48px;
+            filter: drop-shadow(10px 10px 15px rgba(white, 0.5));
         }
         span{
             font-size: 32px;
         }
         img{
-            right: 50%;
+            right: 50% !important;
             transform: translateX(50%);
             height: 75%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    #fv{
+        .bg-icons{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 150px 150px 150px 150px 150px 150px;
+            padding: 0;
+            img{
+                transform: initial;
+                width: 50px;
+                height: 50px;
+                &:nth-child(2n){
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
     }
 }
@@ -551,7 +629,7 @@ section{
         font-size: 20px;
         font-weight: 700;
     }
-    a{
+    a:not(.anime > a){
         width: fit-content;
         height: 55px;
         padding: 0 80px;
@@ -559,10 +637,17 @@ section{
         font-family: "quicksand";
         font-size: 32px;
         font-weight: 600;
-        line-height: 50px;
+        line-height: 45px;
         color: white;
+        border: 3px solid #67DDA1;
         background-color: #67DDA1;
         box-shadow: 10px 15px 20px rgba(#555555, 0.25);
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            border: 3px solid #1BC590;
+            background-color: white;
+            color: #1BC590;
+        }
     }
     ul{
         display: flex;

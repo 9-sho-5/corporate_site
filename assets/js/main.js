@@ -29,6 +29,7 @@ $('.slider').slick({
 // fadeIn animation
 document.addEventListener("DOMContentLoaded", function(){
     new addAminateClass('.anime');
+    new addAminateClass('.anime_fv');
 })
 
 class addAminateClass {
