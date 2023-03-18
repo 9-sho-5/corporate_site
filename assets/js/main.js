@@ -1,3 +1,20 @@
+const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+  for (let i = 0; i < smoothScrollTrigger.length; i++){
+    smoothScrollTrigger[i].addEventListener('click', (e) => {
+      e.preventDefault();
+      let href = smoothScrollTrigger[i].getAttribute('href');
+      let targetElement = document.getElementById(href.replace('#', ''));
+      const rect = targetElement.getBoundingClientRect().top;
+      const offset = window.pageYOffset;
+      const target = rect + offset;
+      window.scrollTo({
+        top: target,
+        behavior: 'smooth',
+      });
+    }
+  );
+}
+
 $('.slider').slick({
     arrows: true,
     infinite: true, // スライドのループを有効にするか
@@ -13,14 +30,15 @@ $('.slider').slick({
           breakpoint: 768, // 768px以下のサイズに適用
           settings: {
             centerMode: false,        //追記
-            centerPadding: "0%",    //追記
+            centerPadding: "20%",    //追記
           }
         },
         {
-          breakpoint: 450, // 768px以下のサイズに適用
+          breakpoint: 425, // 768px以下のサイズに適用
           settings: {
             centerMode: false,        //追記
             centerPadding: "0%",    //追記
+            dots: true,
           }
         },
       ],
@@ -29,6 +47,7 @@ $('.slider').slick({
 // fadeIn animation
 document.addEventListener("DOMContentLoaded", function(){
     new addAminateClass('.anime');
+    new addAminateClass('.anime_fv');
 })
 
 class addAminateClass {
@@ -46,3 +65,39 @@ class addAminateClass {
         this.DOM.pps.forEach(pp => this.DOM.io.observe(pp));
     }
 }
+
+//「開く」がクリックされた場合
+$(document).on('click', '.ham_menu', function () {
+  if ($('body').css('overflow-y') == 'auto') {
+      $('.ham_menu[data-state="inactive"]').attr('data-state', 'active');
+      $('.window-fixed').css('opacity', '1');
+      $('.window-fixed').css('pointer-events', 'all');
+      $('.window-fixed').css('transform', 'translateX(0%)');
+      $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効s
+  } else if ($('body').css('overflow-y') == 'hidden') {
+      $('.ham_menu[data-state="active"]').attr('data-state', 'inactive'); // モーダルウィンドウを非表示
+      $('.window-fixed').css('opacity', '0');
+      $('.window-fixed').css('pointer-events', 'none');
+      $('.window-fixed').css('transform', 'translateX(100%)');
+      $('body').css('overflow-y', 'auto');     // 本文の縦スクロールを有効
+  };
+});
+$(document).on('click', '.links_wrap a', function () {
+  if ($('body').css('overflow-y') == 'auto') {
+      $('.ham_menu[data-state="inactive"]').attr('data-state', 'active');
+      $('.window-fixed').css('opacity', '1');
+      $('.window-fixed').css('pointer-events', 'all');
+      $('.window-fixed').css('transform', 'translateX(0%)');
+      $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効s
+  } else if ($('body').css('overflow-y') == 'hidden') {
+      $('.ham_menu[data-state="active"]').attr('data-state', 'inactive'); // モーダルウィンドウを非表示
+      $('.window-fixed').css('opacity', '0');
+      $('.window-fixed').css('pointer-events', 'none');
+      $('.window-fixed').css('transform', 'translateX(100%)');
+      $('body').css('overflow-y', 'auto');     // 本文の縦スクロールを有効
+  };
+});
+
+$(function($) {
+  $(".modal-button").modaal();
+});
