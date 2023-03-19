@@ -355,6 +355,19 @@ section{
     .service-card-modal-item{
         flex-direction: column;
     }
+    .service-card{
+        &::before{
+            width: 180px;
+        }
+        &::after{
+            content: "Click to Read More";
+            opacity: 1;
+            width: 180px;
+            padding: 0;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
 }
 .icon-wrap{
     display: flex;
