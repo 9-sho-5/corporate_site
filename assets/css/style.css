@@ -44,14 +44,14 @@
 }
 .ham_menu-wrap .ham_menu[data-state=active] span:nth-of-type(1) {
   top: 50%;
-  transform: translateX(-50%) rotate(25deg);
+  transform: translateX(-50%) rotate(45deg);
 }
 .ham_menu-wrap .ham_menu[data-state=active] span:nth-of-type(2) {
   opacity: 0;
 }
 .ham_menu-wrap .ham_menu[data-state=active] span:nth-of-type(3) {
   top: 50%;
-  transform: translateX(-50%) rotate(-25deg);
+  transform: translateX(-50%) rotate(-45deg);
 }
 .ham_menu-wrap .window-fixed {
   position: fixed;
@@ -72,7 +72,7 @@
   height: 100vh;
   margin-left: auto;
   padding: 0 30px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(27, 197, 144, 0.7);
 }
 .ham_menu-wrap .window-fixed .links_wrap {
   position: absolute;
@@ -272,7 +272,7 @@ footer {
   #fv h1 {
     bottom: 10%;
     font-size: 48px;
-    filter: drop-shadow(4px 4px 1px white);
+    filter: drop-shadow(4px 4px 0px white);
   }
   #fv span {
     font-size: 32px;
@@ -355,6 +355,7 @@ section p span {
 
 .service-card {
   position: relative;
+  top: 0;
   display: flex;
   flex: 1 1 350px;
   flex-direction: column;
@@ -364,6 +365,7 @@ section p span {
   background-color: white;
   border-radius: 10px;
   box-shadow: 15px 15px 0 rgba(103, 221, 161, 0.3) !important;
+  transition: all 0.3s ease-in-out;
 }
 .service-card::before {
   content: "";
@@ -376,6 +378,7 @@ section p span {
   padding: 0;
   border-radius: 30px;
   background-color: #D9D9D9;
+  transition: all 0.6s ease-in-out;
 }
 .service-card::after {
   content: "Read More";
@@ -390,12 +393,15 @@ section p span {
   line-height: 26px;
   text-align: center;
   opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.service-card:hover {
+  top: 5px;
 }
 .service-card:hover::before {
   width: 100px;
   padding: 0 10px;
   border-radius: 30px;
-  transition: all 0.6s ease-in-out;
 }
 .service-card:hover::after {
   opacity: 1;
@@ -443,7 +449,7 @@ section p span {
   height: 80px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 5px 5px 0 #67DDA1;
+  box-shadow: 5px 5px 0 #D9D9D9;
 }
 .service-card-modal-item h4 {
   color: #555555;
@@ -463,6 +469,17 @@ section p span {
   }
   .service-card-modal-item {
     flex-direction: column;
+  }
+  .service-card::before {
+    width: 180px;
+  }
+  .service-card::after {
+    content: "Click to Read More";
+    opacity: 1;
+    width: 180px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 30px;
   }
 }
 .icon-wrap {
@@ -620,6 +637,7 @@ section p span {
 }
 .bio-item dt {
   flex: 3;
+  font-weight: bold;
 }
 .bio-item dd {
   flex: 7;
@@ -776,7 +794,9 @@ section p span {
 }
 
 .slick-prev::before, .slick-next::before {
+  opacity: 1;
   color: #000;
+  filter: drop-shadow(10px 15px 10px rgba(85, 85, 85, 0.25));
 }
 
 .slick-prev, .slick-next {
@@ -875,6 +895,8 @@ section p span {
   font-weight: 700;
 }
 #contact a:not(.anime > a) {
+  position: relative;
+  top: 0;
   width: fit-content;
   height: 55px;
   padding: 0 80px;
@@ -886,13 +908,12 @@ section p span {
   color: white;
   border: 3px solid #67DDA1;
   background-color: #67DDA1;
-  box-shadow: 10px 15px 20px rgba(85, 85, 85, 0.25);
-  transition: all 0.5s ease-in-out;
+  box-shadow: 10px 15px 10px rgba(85, 85, 85, 0.25);
+  transition: all 0.3s ease-in-out;
 }
 #contact a:not(.anime > a):hover {
-  border: 3px solid #1BC590;
-  background-color: white;
-  color: #1BC590;
+  top: 5px;
+  box-shadow: 5px 10px 10px rgba(85, 85, 85, 0.25);
 }
 #contact ul {
   display: flex;
