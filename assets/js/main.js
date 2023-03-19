@@ -101,3 +101,8 @@ $(document).on('click', '.links_wrap a', function () {
 $(function($) {
   $(".modal-button").modaal();
 });
+
+window.onload = function() {
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+}
