@@ -378,6 +378,7 @@ section p span {
   padding: 0;
   border-radius: 30px;
   background-color: #D9D9D9;
+  transition: all 0.6s ease-in-out;
 }
 .service-card::after {
   content: "Read More";
@@ -392,6 +393,7 @@ section p span {
   line-height: 26px;
   text-align: center;
   opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 .service-card:hover {
   top: 5px;
@@ -400,7 +402,6 @@ section p span {
   width: 100px;
   padding: 0 10px;
   border-radius: 30px;
-  transition: all 0.6s ease-in-out;
 }
 .service-card:hover::after {
   opacity: 1;
@@ -636,6 +637,7 @@ section p span {
 }
 .bio-item dt {
   flex: 3;
+  font-weight: bold;
 }
 .bio-item dd {
   flex: 7;
@@ -792,7 +794,9 @@ section p span {
 }
 
 .slick-prev::before, .slick-next::before {
+  opacity: 1;
   color: #000;
+  filter: drop-shadow(10px 15px 10px rgba(85, 85, 85, 0.25));
 }
 
 .slick-prev, .slick-next {
